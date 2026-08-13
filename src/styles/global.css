@@ -409,6 +409,15 @@ section[id] {
 
 .hero__copy {
   padding: 0.4rem 0.15rem 0;
+  text-align: center;
+}
+
+.hero__copy .kicker {
+  justify-content: center;
+}
+
+.hero__copy .lede {
+  margin-inline: auto;
 }
 
 @media (max-width: 979px) {
@@ -471,6 +480,7 @@ section[id] {
   }
 
   .hero__copy .kicker {
+    justify-content: center;
     margin-bottom: 0.55rem;
   }
 
@@ -628,6 +638,7 @@ section[id] {
   padding: 1rem 0 0;
   border-top: 1px solid var(--line);
   list-style: none;
+  text-align: center;
 }
 
 .hero__now strong {

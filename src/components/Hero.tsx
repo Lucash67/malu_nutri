@@ -1,4 +1,3 @@
-import { coupons } from "../content";
 import { ContactLink } from "./ContactLink";
 
 const pulse = [
@@ -33,17 +32,6 @@ export function Hero() {
               src="/images/malu-jaleco.jpg"
               alt="Maria Luiza de jaleco, nutricionista em formação"
             />
-            {coupons[0] ? (
-              <a className="hero__chip hero__chip--a" href="#cupons">
-                {coupons[0].code}
-              </a>
-            ) : null}
-            {coupons[1] ? (
-              <a className="hero__chip hero__chip--b" href="#cupons">
-                {coupons[1].code}
-                {coupons[1].perk ? <small>{coupons[1].perk}</small> : null}
-              </a>
-            ) : null}
           </figure>
         </div>
       </div>

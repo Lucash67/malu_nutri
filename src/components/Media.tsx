@@ -1,12 +1,18 @@
+type Extra = {
+  src: string;
+  alt: string;
+};
+
 type Props = {
   src?: string;
   alt?: string;
+  extra?: Extra;
   placeholder: string;
   shape?: "tall" | "square" | "wide";
 };
 
-export function Media({ src, alt, placeholder, shape = "tall" }: Props) {
-  const cls = `media media--${shape}${src ? "" : " media--slot"}`;
+export function Media({ src, alt, extra, placeholder, shape = "tall" }: Props) {
+  const cls = `media media--${shape}${src ? "" : " media--slot"}${extra ? " media--pair" : ""}`;
 
   if (!src) {
     return (
@@ -19,6 +25,7 @@ export function Media({ src, alt, placeholder, shape = "tall" }: Props) {
   return (
     <div className={cls}>
       <img src={src} alt={alt ?? ""} />
+      {extra ? <img src={extra.src} alt={extra.alt} /> : null}
     </div>
   );
 }

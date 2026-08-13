@@ -829,6 +829,24 @@ section[id] {
   object-position: center;
 }
 
+.media--pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.28rem;
+  padding: 0.28rem;
+  place-items: stretch;
+}
+
+.media--pair img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.45rem;
+}
+
 .media--slot {
   padding: 1.2rem;
   background:

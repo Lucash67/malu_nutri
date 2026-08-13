@@ -6,14 +6,19 @@ const pieces: {
   text: string;
   img?: string;
   alt?: string;
+  extra?: { src: string; alt: string };
   placeholder: string;
 }[] = [
   {
     tag: "Alimentação sem complicação",
     title: "Comida de verdade no dia a dia",
     text: "Escolhas reais, sem regra impossível. O que cabe na rotina — inclusive o whey ice cream no fim de semana.",
-    img: "/images/lanche.jpg",
-    alt: "Lanche da rotina com creme e o copo da manhã ao fundo",
+    img: "/images/refeicao.jpg",
+    alt: "Prato da rotina: frango, batata, feijão, arroz e salada",
+    extra: {
+      src: "/images/lanche-fruta.jpg",
+      alt: "Lanche da rotina: maçã com canela",
+    },
     placeholder: "Foto da alimentação",
   },
   {
@@ -57,7 +62,12 @@ export function Share() {
         <div className="share__list">
           {pieces.map((item) => (
             <article className="share-card" key={item.title} data-reveal>
-              <Media src={item.img} alt={item.alt} placeholder={item.placeholder} />
+              <Media
+                src={item.img}
+                alt={item.alt}
+                extra={item.extra}
+                placeholder={item.placeholder}
+              />
               <div className="share-card__body">
                 <p className="share-card__tag">{item.tag}</p>
                 <h3>{item.title}</h3>

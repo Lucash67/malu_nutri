@@ -1,4 +1,3 @@
-import { site } from "../content";
 import { ContactLink } from "./ContactLink";
 
 export function Footer() {
@@ -18,9 +17,6 @@ export function Footer() {
             <a href="#explorar">Explorar</a>
             <a href="#beneficios">Benefícios</a>
             <ContactLink />
-            <a href={site.instagram} target="_blank" rel="noreferrer">
-              {site.instagramHandle}
-            </a>
           </nav>
         </div>
         <p className="footer__note">

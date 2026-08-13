@@ -1,4 +1,4 @@
-import { site } from "../content";
+import { ContactLink } from "./ContactLink";
 
 export function Creator() {
   return (
@@ -14,8 +14,8 @@ export function Creator() {
           <p className="kicker">Criadora</p>
           <h2 className="display">Vamos falar sobre alimentação?</h2>
           <p className="lede">
-            O Instagram mostra o dia. Esta página organiza o que fica: história,
-            materiais, benefícios e um jeito de conversar.
+            O dia a dia acontece no Instagram. Esta página organiza o que fica:
+            história, materiais, benefícios e um jeito de conversar.
           </p>
           <p className="lede">
             O tom é o dela — direto, informal, sem drama de dieta. “Exagerou no
@@ -23,16 +23,14 @@ export function Creator() {
             conversa.
           </p>
           <div className="creator__note">
-            <strong>Instagram × esta página</strong>
-            Lá: rotina e conteúdo. Aqui: marca, aprofundamento e próximos
-            passos.
+            <strong>Por aqui × conversa</strong>
+            Aqui: marca, aprofundamento e próximos passos. Para falar com a
+            Malu, o caminho é o WhatsApp.
           </div>
           <div className="hero__actions">
-            <a className="btn btn--solid" href="#materiais">
+            <ContactLink className="btn btn--solid" />
+            <a className="btn btn--ghost" href="#materiais">
               Conhecer materiais
-            </a>
-            <a className="btn btn--ghost" href={site.instagram} target="_blank" rel="noreferrer">
-              Ver a rotina
             </a>
           </div>
         </div>

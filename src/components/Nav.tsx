@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { site } from "../content";
 import { ContactLink } from "./ContactLink";
 
 const links = [
@@ -60,9 +59,6 @@ export function Nav() {
           </a>
         ))}
         <ContactLink onClick={() => setOpen(false)} />
-        <a href={site.instagram} target="_blank" rel="noreferrer" onClick={() => setOpen(false)}>
-          {site.instagramHandle}
-        </a>
       </div>
     </header>
   );

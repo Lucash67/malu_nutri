@@ -8,9 +8,9 @@ export const site = {
   instagram: "https://www.instagram.com/_malunutri/",
   instagramHandle: "@_malunutri",
   contact: {
-    label: "Falar comigo",
+    label: "Falar no WhatsApp",
     /** Só dígitos, com DDI. Ex.: "5511999999999" */
-    whatsapp: "",
+    whatsapp: "5585997024779",
     email: "",
     /**
      * Canal de conversa atual, enquanto WhatsApp/e-mail não existem.
@@ -24,10 +24,13 @@ export function hasDirectContact() {
   return Boolean(site.contact.whatsapp || site.contact.email);
 }
 
-/** Destino do CTA primário “Falar comigo”. */
+/** Destino do CTA primário “Falar no WhatsApp”. */
 export function contactHref() {
   const digits = site.contact.whatsapp.replace(/\D/g, "");
-  if (digits) return `https://wa.me/${digits}`;
+  if (digits) {
+    const text = encodeURIComponent("Oi Malu, vim pelo site.");
+    return `https://wa.me/${digits}?text=${text}`;
+  }
   if (site.contact.email) return `mailto:${site.contact.email}`;
   return site.contact.messageUrl;
 }

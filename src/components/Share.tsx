@@ -59,7 +59,7 @@ export function Share() {
                   alt={item.alt}
                   extra={item.extra}
                   placeholder={item.placeholder}
-                  shape={item.tone === "flip" ? "thumb" : "wide"}
+                  shape={item.tone === "feature" ? "wide" : "thumb"}
                 />
               ) : null}
               <div className="share-card__body">

@@ -44,7 +44,7 @@ export function Practice() {
           {items.map((item) => (
             <article className={`practice__item practice__item--${item.tone}`} key={item.k} data-reveal>
               {item.tone !== "plain" ? (
-                <Media src={item.img} alt={item.alt} placeholder={item.placeholder} shape="wide" />
+                <Media src={item.img} alt={item.alt} placeholder={item.placeholder} shape="thumb" />
               ) : null}
               <div>
                 <span>{item.k}</span>

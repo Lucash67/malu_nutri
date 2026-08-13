@@ -448,7 +448,7 @@ section[id] {
   .hero__copy {
     position: static;
     z-index: 3;
-    padding: 1.15rem 0.1rem 0;
+    padding: 0.35rem 0.1rem 1.2rem;
     color: inherit;
   }
 
@@ -2023,14 +2023,14 @@ section[id] {
 
   .hero__stage {
     grid-template-columns: 1.05fr 0.95fr;
-    align-items: end;
+    align-items: center;
     gap: 2rem;
   }
 
   .hero__frames {
     position: relative;
     min-height: 0;
-    place-items: end start;
+    place-items: center;
   }
 
   .hero__stack {
@@ -2044,7 +2044,6 @@ section[id] {
     right: auto;
     bottom: auto;
     padding-bottom: 1.4rem;
-    order: -1;
     color: inherit;
   }
 

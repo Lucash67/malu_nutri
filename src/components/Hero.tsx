@@ -12,12 +12,24 @@ export function Hero() {
     <section className="hero" id="inicio">
       <div className="wrap hero__stage">
         <div className="hero__frames">
-          <figure className="hero__frame hero__frame--main">
-            <img
-              src="/images/malu-jaleco.jpg"
-              alt="Maria Luiza de jaleco, nutricionista em formação"
-            />
-          </figure>
+          <div className="hero__stack">
+            <figure className="hero__shot hero__shot--main">
+              <img
+                src="/images/malu-jaleco.jpg"
+                alt="Maria Luiza de jaleco, nutricionista em formação"
+              />
+            </figure>
+            <figure className="hero__shot hero__shot--detail">
+              <img
+                src="/images/malu-jaleco-detalhe.jpg"
+                alt="Jaleco bordado: M. Luiza Pinheiro, Nutrição"
+              />
+              <figcaption>
+                <small>no jaleco</small>
+                M. Luiza Pinheiro
+              </figcaption>
+            </figure>
+          </div>
         </div>
         <div className="hero__copy">
           <p className="kicker">Nutrição · 6º semestre</p>

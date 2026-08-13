@@ -2377,23 +2377,46 @@ section[id] {
 
 .stories__wait {
   display: grid;
-  gap: 0.85rem;
-  justify-items: start;
+  justify-items: center;
+  gap: 1.15rem;
+  text-align: center;
 }
 
 .stories__wait > p {
+  margin: 0;
+  max-width: 22rem;
   color: var(--ink-soft);
   font-size: 0.92rem;
 }
 
 .polaroids--mini {
-  min-height: 12.5rem;
-  width: min(100%, 18rem);
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  min-height: 0;
+  padding: 0.8rem 0 0.2rem;
 }
 
 .polaroids--mini .polaroid {
-  width: 46%;
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+  width: 7.6rem;
   padding-bottom: 1.15rem;
+}
+
+.polaroids--mini .polaroid--before {
+  z-index: 1;
+  margin-right: -1.1rem;
+  transform: rotate(-8deg);
+}
+
+.polaroids--mini .polaroid--after {
+  z-index: 2;
+  margin-left: -1.1rem;
+  transform: rotate(7deg);
 }
 
 .connect__panel .lede {

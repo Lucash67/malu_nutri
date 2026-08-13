@@ -31,8 +31,8 @@ const pieces: {
   {
     tag: "Bastidores",
     title: "Entre um post e a aula",
-    img: "/images/cuscuz-estudo.jpg",
-    alt: "Cuscuz com frango ao lado do caderno de inflamação e ômega-3",
+    img: "/images/lanche.jpg",
+    alt: "Lanche da rotina na mão, entre o estudo e o dia",
     placeholder: "Foto dos bastidores",
   },
 ];

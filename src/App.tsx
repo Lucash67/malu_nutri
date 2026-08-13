@@ -1,18 +1,15 @@
-import { Chapters } from "./components/Chapters";
+import { Collab } from "./components/Collab";
 import { Connect } from "./components/Connect";
-import { Creator } from "./components/Creator";
+import { Dock } from "./components/Dock";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Identity } from "./components/Identity";
-import { Instagram } from "./components/Instagram";
-import { Materials } from "./components/Materials";
 import { Nav } from "./components/Nav";
-import { Now } from "./components/Now";
 import { Partners } from "./components/Partners";
 import { Practice } from "./components/Practice";
-import { Recommendations } from "./components/Recommendations";
 import { Share } from "./components/Share";
 import { Stories } from "./components/Stories";
+import { Ticker } from "./components/Ticker";
 import { useReveal } from "./hooks/useReveal";
 
 export default function App() {
@@ -26,22 +23,17 @@ export default function App() {
       <Nav />
       <main>
         <Hero />
+        <Ticker />
         <Identity />
-        <Now />
         <Share />
-        <Creator />
+        <Partners />
+        <Collab />
         <Practice />
         <Stories />
-        <div id="explorar">
-          <Materials />
-          <Partners />
-          <Recommendations />
-        </div>
-        <Instagram />
-        <Chapters />
         <Connect />
       </main>
       <Footer />
+      <Dock />
     </>
   );
 }

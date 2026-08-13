@@ -8,7 +8,7 @@ type Props = {
   alt?: string;
   extra?: Extra;
   placeholder: string;
-  shape?: "tall" | "square" | "wide";
+  shape?: "tall" | "square" | "wide" | "thumb";
 };
 
 export function Media({ src, alt, extra, placeholder, shape = "tall" }: Props) {

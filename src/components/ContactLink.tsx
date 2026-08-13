@@ -1,14 +1,15 @@
 import type { ReactNode } from "react";
-import { contactHref, isExternalHref, site } from "../content";
+import { contactHref, isExternalHref, partnershipHref, site } from "../content";
 
 type Props = {
   className?: string;
   children?: ReactNode;
   onClick?: () => void;
+  intent?: "talk" | "partnership";
 };
 
-export function ContactLink({ className, children, onClick }: Props) {
-  const href = contactHref();
+export function ContactLink({ className, children, onClick, intent = "talk" }: Props) {
+  const href = intent === "partnership" ? partnershipHref() : contactHref();
   const external = isExternalHref(href);
 
   return (

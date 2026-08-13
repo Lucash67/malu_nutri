@@ -24,15 +24,24 @@ export function hasDirectContact() {
   return Boolean(site.contact.whatsapp || site.contact.email);
 }
 
+function waHref(message: string) {
+  const digits = site.contact.whatsapp.replace(/\D/g, "");
+  if (!digits) return "";
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+}
+
 /** Destino do CTA primário “Falar no WhatsApp”. */
 export function contactHref() {
-  const digits = site.contact.whatsapp.replace(/\D/g, "");
-  if (digits) {
-    const text = encodeURIComponent("Oi Malu, vim pelo site.");
-    return `https://wa.me/${digits}?text=${text}`;
-  }
+  const href = waHref("Oi Malu, vim pelo site.");
+  if (href) return href;
   if (site.contact.email) return `mailto:${site.contact.email}`;
   return site.contact.messageUrl;
+}
+
+/** CTA de marcas, eventos e conteúdo. */
+export function partnershipHref() {
+  const href = waHref("Oi Malu, vim pelo site. Quero falar de parceria.");
+  return href || contactHref();
 }
 
 export function isExternalHref(href: string) {
@@ -86,10 +95,11 @@ export const benefits: Benefit[] = [
     name: "HeyMu",
     tag: "Alimentação",
     handle: "@heymubrasil",
-    text: "Achados da rotina — doce de leite sem adição de açúcar e outros favoritos que cabem no dia a dia.",
+    text: "Doce de leite sem adição de açúcar — da rotina dela.",
     img: "/images/heymu-pote.jpg",
     alt: "Pote Hey! Mu, doce de leite sem adição de açúcar",
     code: "HeyMalu5",
+    perk: "cupom da Malu",
     href: "https://www.instagram.com/heymubrasil/",
   },
   {
@@ -97,7 +107,7 @@ export const benefits: Benefit[] = [
     name: "Life Slim",
     tag: "Suplementos",
     handle: "lifemore",
-    text: "De lei antes do treino. Faz parte da manhã, do treino e do conteúdo.",
+    text: "O copo de lei antes do treino.",
     img: "/images/lifeslim.jpg",
     alt: "Pote Life Slim, da lifemore",
     code: "MALU",
@@ -107,9 +117,11 @@ export const benefits: Benefit[] = [
     id: "longjack",
     name: "Long Jack",
     tag: "Bastidores",
-    text: "Visita à fábrica da Long Jack | União Vegetal | Biodis. Parceria de conteúdo e experiência.",
+    text: "Visita à fábrica. Parceria de conteúdo.",
   },
 ];
+
+export const coupons = benefits.filter((item) => Boolean(item.code));
 
 export type Recommendation = {
   id: string;

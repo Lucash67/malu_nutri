@@ -12,17 +12,14 @@ export function Footer() {
             </p>
           </div>
           <nav className="footer__links" aria-label="Rodapé">
-            <a href="#sobre">Sobre</a>
-            <a href="#relatos">Relatos</a>
-            <a href="#explorar">Explorar</a>
-            <a href="#beneficios">Benefícios</a>
+            <a href="#cupons">Cupons</a>
+            <a href="#parcerias">Parcerias</a>
             <ContactLink />
           </nav>
         </div>
         <p className="footer__note">
-          Estudante de Nutrição — 6º semestre. Conteúdo educativo e informativo,
-          sem recomendações clínicas individuais. Esta página não apresenta a
-          Malu como nutricionista formada.
+          Estudante de Nutrição — 6º semestre. Conteúdo educativo. Esta página não apresenta a Malu
+          como nutricionista formada.
         </p>
       </div>
     </footer>

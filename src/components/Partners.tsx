@@ -1,67 +1,46 @@
-import { useState } from "react";
 import { benefits } from "../content";
-import { Media } from "./Media";
+import { useCopyCode } from "../hooks/useCopyCode";
 
 export function Partners() {
-  const [copied, setCopied] = useState<string | null>(null);
-
-  async function copy(code: string) {
-    try {
-      await navigator.clipboard.writeText(code);
-      setCopied(code);
-      window.setTimeout(() => setCopied(null), 1800);
-    } catch {
-      setCopied(null);
-    }
-  }
+  const { copied, copy } = useCopyCode();
 
   return (
-    <section className="partners" id="beneficios">
+    <section className="partners" id="cupons">
       <div className="wrap">
         <div className="partners__head" data-reveal>
           <p className="kicker">Aproveitar</p>
-          <h2 className="display">Cupons e recomendações da rotina.</h2>
-          <p className="lede">
-            Marcas que já entram no dia a dia da Malu. Cupom quando existe,
-            visita quando aconteceu — sem vitrine agressiva.
-          </p>
+          <h2 className="display">Os cupons da Malu.</h2>
+          <p className="lede">Toque, copie, use. Sem enrolação.</p>
         </div>
         <div className="partners__grid">
           {benefits.map((item) => (
-            <article className="partner" key={item.id} data-reveal>
-              <Media
-                src={item.img}
-                alt={item.alt ?? item.name}
-                placeholder={`${item.name} · foto de referência`}
-                shape="square"
-              />
-              <div className="partner__body">
-                <div className="partner__top">
+            <article className={`ticket${item.code ? " ticket--hot" : ""}`} key={item.id} data-reveal>
+              <div className="ticket__top">
+                {item.img ? (
+                  <img src={item.img} alt={item.alt ?? item.name} />
+                ) : (
+                  <span className="ticket__mark" aria-hidden>
+                    {item.name.slice(0, 1)}
+                  </span>
+                )}
+                <div>
                   <span>{item.tag}</span>
-                  {item.handle ? <span>{item.handle}</span> : null}
+                  <h3>{item.name}</h3>
                 </div>
-                <h3>{item.name}</h3>
-                <p>{item.text}</p>
-                {item.code ? (
-                  <button className="coupon" type="button" onClick={() => copy(item.code!)}>
-                    <span>
-                      <small>
-                        Cupom
-                        {item.validity ? ` · ${item.validity}` : ""}
-                      </small>
-                      <b>{item.code}</b>
-                    </span>
-                    <em>{copied === item.code ? "copiado" : item.perk ?? "copiar"}</em>
-                  </button>
-                ) : item.perk ? (
-                  <p className="edition__meta">{item.perk}</p>
-                ) : null}
-                {item.href ? (
-                  <a className="partner__link" href={item.href} target="_blank" rel="noreferrer">
-                    Conhecer ↗
-                  </a>
-                ) : null}
+                {item.perk && item.code ? <em className="ticket__perk">{item.perk}</em> : null}
               </div>
+              <p>{item.text}</p>
+              {item.code ? (
+                <button className="coupon coupon--xl" type="button" onClick={() => copy(item.code!)}>
+                  <span>
+                    <small>{copied === item.code ? "copiado · cola no checkout" : "toque para copiar"}</small>
+                    <b>{item.code}</b>
+                  </span>
+                  <em>{copied === item.code ? "✓" : "copiar"}</em>
+                </button>
+              ) : (
+                <p className="ticket__soon">Parceria de conteúdo — sem cupom (ainda).</p>
+              )}
             </article>
           ))}
         </div>

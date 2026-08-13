@@ -3,9 +3,9 @@ import { ContactLink } from "./ContactLink";
 
 const links = [
   { href: "#inicio", label: "Início" },
-  { href: "#sobre", label: "Sobre" },
-  { href: "#jornada", label: "Jornada" },
-  { href: "#explorar", label: "Explorar" },
+  { href: "#sobre", label: "Malu" },
+  { href: "#cupons", label: "Cupons" },
+  { href: "#parcerias", label: "Parcerias" },
   { href: "#contato", label: "Contato" },
 ];
 
@@ -41,7 +41,7 @@ export function Nav() {
             </a>
           ))}
         </nav>
-        <ContactLink className="btn btn--solid nav__cta" />
+        <ContactLink className="btn btn--solid nav__cta btn--shine" />
         <button
           className="nav__toggle"
           type="button"

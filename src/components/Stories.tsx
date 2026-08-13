@@ -1,20 +1,8 @@
-import { stories, type Story } from "../content";
+import { stories } from "../content";
 import { Compare } from "./Compare";
-
-function MiniPair({ item }: { item: Story }) {
-  if (!item.before || !item.after) return null;
-  return (
-    <div className="mini-pair">
-      <img src={item.before} alt={`${item.name} · antes`} />
-      <span aria-hidden>→</span>
-      <img src={item.after} alt={`${item.name} · depois`} />
-    </div>
-  );
-}
 
 export function Stories() {
   const featured = stories.find((item) => item.featured) ?? stories[0];
-  const notes = stories.filter((item) => item.id !== featured?.id);
   const ready = stories.length > 0;
 
   return (
@@ -23,12 +11,7 @@ export function Stories() {
         <div className="stories__head" data-reveal>
           <p className="kicker">Relatos</p>
           <h2 className="display">O corpo muda. O recado fica.</h2>
-          <p className="lede">
-            Não é vitrine de milagre nem ranking de quilos. É correspondência
-            autorizada — o antes e o depois do físico, e o que a pessoa quis
-            escrever depois do cuidado. A Malu ainda está em formação: nada
-            aqui finge diploma, clínica ou resultado prometido.
-          </p>
+          <p className="lede">Só entra com autorização. Nada inventado.</p>
         </div>
 
         {ready && featured ? (
@@ -47,7 +30,6 @@ export function Stories() {
               <span className="seal" aria-hidden>
                 M
               </span>
-              <p className="letter__mark">uma mensagem</p>
               <blockquote>
                 <p>{featured.quote}</p>
               </blockquote>
@@ -58,10 +40,8 @@ export function Stories() {
             </article>
           </div>
         ) : (
-          <div className="stories__stage">
-            <div className="polaroids" data-reveal="scale" aria-hidden>
-              <span className="tape tape--a" />
-              <span className="tape tape--b" />
+          <div className="stories__wait" data-reveal>
+            <div className="polaroids polaroids--mini" aria-hidden>
               <figure className="polaroid polaroid--before">
                 <div className="polaroid__film">
                   <span className="polaroid__ghost" />
@@ -74,60 +54,10 @@ export function Stories() {
                 </div>
                 <figcaption>Depois</figcaption>
               </figure>
-              <p className="polaroids__hint">arraste para comparar · fotos com autorização</p>
             </div>
-            <article className="letter letter--waiting" data-reveal>
-              <span className="seal seal--open" aria-hidden>
-                M
-              </span>
-              <p className="letter__mark">aguardando a primeira carta</p>
-              <blockquote>
-                <p>
-                  Quando alguém autorizar, a mensagem entra aqui — no tom dela,
-                  sem estrela, sem “perdi X quilos”, sem personagem inventado.
-                </p>
-              </blockquote>
-              <footer>
-                <strong className="letter__sign">Nome</strong>
-                <span>Acompanhamento · com permissão</span>
-              </footer>
-            </article>
+            <p>As primeiras cartas ainda estão a caminho.</p>
           </div>
         )}
-
-        {ready && notes.length > 0 ? (
-          <ul className="notes">
-            {notes.map((item) => (
-              <li key={item.id} data-reveal>
-                <MiniPair item={item} />
-                <blockquote>{item.quote}</blockquote>
-                <p>
-                  <strong>{item.name}</strong>
-                  {item.context ? ` · ${item.context}` : ""}
-                </p>
-              </li>
-            ))}
-          </ul>
-        ) : null}
-
-        {!ready ? (
-          <ul className="notes notes--ghost">
-            <li data-reveal>
-              <span>espaço para uma mensagem autorizada</span>
-            </li>
-            <li data-reveal>
-              <span>espaço para uma mensagem autorizada</span>
-            </li>
-            <li data-reveal>
-              <span>espaço para uma mensagem autorizada</span>
-            </li>
-          </ul>
-        ) : null}
-
-        <p className="stories__fine" data-reveal>
-          Fotos e recados só entram com autorização. O slider de antes e depois
-          ocupa o lugar dos polaroides assim que as imagens chegarem.
-        </p>
       </div>
     </section>
   );

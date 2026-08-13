@@ -1,24 +1,9 @@
 const traits = [
-  {
-    label: "Formação",
-    text: "Estudante de Nutrição, transformando conhecimento em cuidado.",
-  },
-  {
-    label: "Esporte",
-    text: "Atleta de beach tennis, movida pelo esporte e pela superação.",
-  },
-  {
-    label: "Clínica",
-    text: "Encantada pela área clínica, onde cada detalhe faz diferença.",
-  },
-  {
-    label: "Família",
-    text: "Fascinada pela família, meu maior alicerce e inspiração.",
-  },
-  {
-    label: "Mundo",
-    text: "Apaixonada por natureza e viagens, explorando com propósito.",
-  },
+  { label: "Formação", text: "Nutrição · 6º / 8" },
+  { label: "Esporte", text: "Beach tennis" },
+  { label: "Olhar", text: "Área clínica" },
+  { label: "Base", text: "Família" },
+  { label: "Mundo", text: "Natureza e viagens" },
 ];
 
 export function Identity() {
@@ -26,19 +11,12 @@ export function Identity() {
     <section className="identity" id="sobre">
       <div className="wrap identity__grid">
         <figure className="identity__photo" data-reveal="scale">
-          <img
-            src="/images/malu-retrato.jpg"
-            alt="Malu, retrato"
-          />
-          <figcaption>Maria Luiza — mas pode me chamar de Malu.</figcaption>
+          <img src="/images/malu-retrato.jpg" alt="Malu, retrato" />
         </figure>
         <div className="identity__intro" data-reveal>
           <p className="kicker">Quem é a Malu</p>
-          <h2 className="display">Muito além da sala de aula.</h2>
-          <p className="lede">
-            A graduação é o eixo. O resto — treino, conteúdo, estágio, família —
-            é o que torna essa formação uma história, e não só um currículo.
-          </p>
+          <h2 className="display">Além da sala de aula.</h2>
+          <p className="lede">Graduação no eixo. Treino, conteúdo e estágio no mesmo dia.</p>
           <div className="identity__traits">
             {traits.map((item) => (
               <article className="trait" key={item.label}>
@@ -47,10 +25,7 @@ export function Identity() {
               </article>
             ))}
           </div>
-          <p className="identity__quote">
-            Para mim a alimentação é essencial, como chave para o bem-estar e a
-            qualidade de vida.
-          </p>
+          <p className="identity__quote">Alimentação como chave — não como punição.</p>
         </div>
       </div>
     </section>

@@ -11,6 +11,14 @@ export function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="wrap hero__stage">
+        <div className="hero__frames">
+          <figure className="hero__frame hero__frame--main">
+            <img
+              src="/images/malu-jaleco.jpg"
+              alt="Maria Luiza de jaleco, nutricionista em formação"
+            />
+          </figure>
+        </div>
         <div className="hero__copy">
           <p className="kicker">Nutrição · 6º semestre</p>
           <h1 className="display">
@@ -25,14 +33,6 @@ export function Hero() {
               Pegar os cupons
             </a>
           </div>
-        </div>
-        <div className="hero__frames">
-          <figure className="hero__frame hero__frame--main">
-            <img
-              src="/images/malu-jaleco.jpg"
-              alt="Maria Luiza de jaleco, nutricionista em formação"
-            />
-          </figure>
         </div>
       </div>
       <ul className="wrap hero__now" data-reveal>

@@ -1,6 +1,5 @@
 import { Collab } from "./components/Collab";
 import { Connect } from "./components/Connect";
-import { Dock } from "./components/Dock";
 import { Footer } from "./components/Footer";
 import { Hero } from "./components/Hero";
 import { Identity } from "./components/Identity";
@@ -33,7 +32,6 @@ export default function App() {
         <Connect />
       </main>
       <Footer />
-      <Dock />
     </>
   );
 }

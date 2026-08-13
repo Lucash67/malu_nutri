@@ -299,7 +299,8 @@ section[id] {
 
 .hero__frame img {
   width: 100%;
-  height: 22rem;
+  height: 72vh;
+  min-height: 28rem;
   object-fit: cover;
   object-position: center top;
   transform: none;
@@ -375,8 +376,8 @@ section[id] {
   }
 
   .hero__frame--main img {
-    height: min(52svh, 22rem);
-    min-height: 18rem;
+    height: min(62svh, 34rem);
+    min-height: 22rem;
     object-position: center top;
     filter: none;
   }
@@ -1867,7 +1868,7 @@ section[id] {
 
 /* ——— footer ——— */
 .footer {
-  padding: 1.6rem 0 calc(6.4rem + env(safe-area-inset-bottom));
+  padding: 1.6rem 0 calc(2.2rem + env(safe-area-inset-bottom));
   border-top: 1px solid var(--line);
 }
 
@@ -1966,14 +1967,14 @@ section[id] {
   }
 
   .hero__stage {
-    grid-template-columns: 1.05fr 0.72fr;
-    align-items: center;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: end;
     gap: 2rem;
   }
 
   .hero__frames {
     position: relative;
-    min-height: 0;
+    min-height: 36rem;
   }
 
   .hero__frame--main {
@@ -1981,9 +1982,9 @@ section[id] {
   }
 
   .hero__frame--main img {
-    height: 28rem;
-    max-height: 28rem;
-    min-height: 24rem;
+    height: 78vh;
+    max-height: 42rem;
+    min-height: 34rem;
     object-position: center top;
   }
 
@@ -2096,17 +2097,9 @@ section[id] {
     grid-template-columns: 1fr auto;
     align-items: center;
   }
-
-  .footer {
-    padding-bottom: 2.2rem;
-  }
-
-  .dock {
-    display: none;
-  }
 }
 
-/* ——— live: ticker, cupons, collab, dock, motion ——— */
+/* ——— live: ticker, cupons, collab, motion ——— */
 .hero__frame {
   isolation: isolate;
 }
@@ -2420,40 +2413,6 @@ section[id] {
   border-bottom: 1px solid var(--line-strong);
 }
 
-.dock {
-  position: fixed;
-  left: 0.75rem;
-  right: 0.75rem;
-  bottom: calc(0.7rem + env(safe-area-inset-bottom));
-  z-index: 45;
-  display: grid;
-  grid-template-columns: 1.35fr 0.9fr;
-  gap: 0.45rem;
-  padding: 0.4rem;
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--ink) 92%, transparent);
-  box-shadow: 0 16px 40px rgba(36, 30, 26, 0.28);
-  backdrop-filter: blur(16px);
-}
-
-.dock a {
-  display: grid;
-  place-items: center;
-  min-height: 2.75rem;
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 600;
-}
-
-.dock__wa {
-  background: var(--white);
-  color: var(--ink);
-}
-
-.dock__coupons {
-  color: var(--white);
-}
-
 @keyframes marquee {
   to {
     transform: translateX(-50%);
@@ -2485,14 +2444,6 @@ section[id] {
 @media (min-width: 980px) {
   .collab__panel {
     padding: 2rem 2.1rem;
-  }
-
-  .dock {
-    display: none;
-  }
-
-  .footer {
-    padding-bottom: 2.2rem;
   }
 }
 

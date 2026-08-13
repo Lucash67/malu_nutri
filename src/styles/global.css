@@ -301,17 +301,20 @@ section[id] {
   height: 72vh;
   min-height: 28rem;
   object-fit: cover;
-  object-position: center top;
-  transform: scale(1.02);
+  object-position: center 18%;
+  transform: scale(1.14);
   transition: transform 1.4s var(--ease);
 }
 
 .hero__frame:hover img {
-  transform: scale(1.08);
+  transform: scale(1.2);
 }
 
 @media (hover: none) {
-  .hero__frame:hover img,
+  .hero__frame:hover img {
+    transform: scale(1.14);
+  }
+
   .btn:hover {
     transform: none;
   }
@@ -365,9 +368,9 @@ section[id] {
   }
 
   .hero__frame--main img {
-    height: min(62svh, 34rem);
+    height: min(64svh, 34rem);
     min-height: 22rem;
-    object-position: center top;
+    object-position: center 14%;
     filter: none;
   }
 
@@ -1927,6 +1930,7 @@ section[id] {
     height: 78vh;
     max-height: 42rem;
     min-height: 34rem;
+    object-position: center 16%;
   }
 
   .hero__frame--creator {

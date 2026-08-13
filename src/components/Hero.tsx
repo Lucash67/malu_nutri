@@ -1,5 +1,3 @@
-import { ContactLink } from "./ContactLink";
-
 const pulse = [
   { k: "6/8", t: "semestres" },
   { k: "Estágio", t: "na prática" },
@@ -19,12 +17,6 @@ export function Hero() {
           </h1>
           <p className="hero__pill">pode me chamar de Malu</p>
           <p className="lede">Comida de verdade, faculdade e treino — sem pose de dieta.</p>
-          <div className="hero__actions">
-            <ContactLink className="btn btn--solid btn--shine" />
-            <a className="btn btn--ghost" href="#cupons">
-              Pegar os cupons
-            </a>
-          </div>
         </div>
         <div className="hero__frames">
           <div className="hero__stack">
@@ -39,10 +31,6 @@ export function Hero() {
                 src="/images/malu-jaleco-detalhe.jpg"
                 alt="Jaleco bordado: M. Luiza Pinheiro, Nutrição"
               />
-              <figcaption>
-                <small>no jaleco</small>
-                M. Luiza Pinheiro
-              </figcaption>
             </figure>
           </div>
         </div>

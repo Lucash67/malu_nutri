@@ -325,7 +325,7 @@ section[id] {
   bottom: 0.15rem;
   z-index: 2;
   width: 46%;
-  padding: 0.38rem 0.38rem 1.85rem;
+  padding: 0.38rem 0.38rem 1.15rem;
   border-radius: 0.3rem 0.85rem 0.3rem 0.85rem;
   background: var(--white);
   box-shadow: 0 16px 36px rgba(36, 30, 26, 0.16);

@@ -1,6 +1,6 @@
 import { ContactLink } from "./ContactLink";
 
-const marks = ["HeyMu", "Life Slim", "Long Jack"];
+const marks = ["HeyMu", "Life Slim"];
 
 export function Collab() {
   return (

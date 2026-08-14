@@ -8,7 +8,7 @@ export function Connect() {
           Próximo passo
         </p>
         <h2 className="display">Bora conversar?</h2>
-        <p className="lede">Consulta, dúvida, parceria. O WhatsApp está aberto.</p>
+        <p className="lede">Dúvida, papo ou ideia de collab. O WhatsApp está aberto.</p>
         <div className="connect__primary">
           <ContactLink className="btn btn--solid btn--shine">Falar no WhatsApp</ContactLink>
         </div>

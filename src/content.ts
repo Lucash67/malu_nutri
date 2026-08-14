@@ -113,12 +113,6 @@ export const benefits: Benefit[] = [
     code: "MALU",
     perk: "10% off",
   },
-  {
-    id: "longjack",
-    name: "Long Jack",
-    tag: "Bastidores",
-    text: "Visita à fábrica. Parceria de conteúdo.",
-  },
 ];
 
 export const coupons = benefits.filter((item) => Boolean(item.code));

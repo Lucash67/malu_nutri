@@ -15,11 +15,6 @@ const items = [
     alt: "Aula de simulação clínica na graduação de Nutrição",
     placeholder: "Aula prática",
   },
-  {
-    k: "Indústria",
-    title: "Bastidores reais",
-    placeholder: "Fábrica",
-  },
 ];
 
 export function Practice() {

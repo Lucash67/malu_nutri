@@ -1,23 +1,23 @@
 const points = [
   {
-    tag: "Ainda não",
-    title: "Atendimento",
-    text: "Sem consulta, sem consultório, sem CRN. Ela está no 6º semestre.",
+    tag: "Agora",
+    title: "6 de 8",
+    text: "Graduação, estágio e conteúdo no mesmo dia. Este é o capítulo atual.",
   },
   {
-    tag: "Já tem",
-    title: "A formação em público",
-    text: "Aula, comida de verdade e o que a faculdade vira conversa.",
+    tag: "Em breve",
+    title: "A reta final",
+    text: "Dois semestres pela frente. Continuar praticando e compartilhando.",
   },
   {
-    tag: "Já tem",
-    title: "Cupons da rotina",
-    text: "Marcas que ela usa de verdade — toque, copie, use.",
+    tag: "Pela frente",
+    title: "Depois do diploma",
+    text: "A profissional que já está nascendo — sem antecipar o que ainda não é.",
   },
   {
-    tag: "Aberto",
-    title: "Um papo no WhatsApp",
-    text: "Dúvida, ideia de collab ou só um oi. Sem promessa de consulta.",
+    tag: "A escrever",
+    title: "O que ainda se abre",
+    text: "Próximos capítulos em aberto. De propósito.",
   },
 ];
 
@@ -26,9 +26,9 @@ export function Ground() {
     <section className="ground" id="por-aqui">
       <div className="wrap">
         <div className="ground__head" data-reveal>
-          <p className="kicker">Com o pé no chão</p>
-          <h2 className="display">O que tem por aqui — e o que ainda não.</h2>
-          <p className="lede">Em formação. Sem antes e depois, sem resultado prometido.</p>
+          <p className="kicker">O caminho</p>
+          <h2 className="display">Meu andamento. O que vem pela frente.</h2>
+          <p className="lede">A história está sendo escrita agora — sem pular o capítulo.</p>
         </div>
         <div className="ground__list">
           {points.map((item) => (

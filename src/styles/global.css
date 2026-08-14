@@ -841,7 +841,7 @@ section[id] {
 .share__head h2,
 .practice__head h2,
 .partners__head h2,
-.stories__head h2,
+.ground__head h2,
 .identity__intro h2 {
   font-size: clamp(1.7rem, 6.2vw, 2.55rem);
 }
@@ -1377,6 +1377,52 @@ section[id] {
   margin-top: 0.2rem;
   color: var(--ink-soft);
   font-size: 0.9rem;
+}
+
+/* ——— ground / o que tem por aqui ——— */
+.ground {
+  padding: 2.6rem 0 3rem;
+}
+
+.ground__head {
+  margin-bottom: 1.4rem;
+}
+
+.ground__head .lede {
+  margin-top: 0.45rem;
+}
+
+.ground__list {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.ground-card {
+  padding: 0.95rem 1rem 1.05rem;
+  border-radius: 1.15rem;
+  background: var(--white);
+}
+
+.ground-card span {
+  display: block;
+  color: var(--blush);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ground-card h3 {
+  margin: 0.2rem 0 0.35rem;
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-weight: 520;
+}
+
+.ground-card p {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.4;
 }
 
 /* ——— stories / relatos ——— */
@@ -2036,6 +2082,7 @@ section[id] {
   .share__list,
   .partners__grid,
   .practice__mosaic,
+  .ground__list,
   .chapters__path {
     grid-template-columns: 1fr 1fr;
   }

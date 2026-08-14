@@ -24,11 +24,6 @@ const pieces: {
     placeholder: "Foto do estudo",
   },
   {
-    tag: "Treino",
-    title: "Beach tennis e constância",
-    placeholder: "Beach tennis",
-  },
-  {
     tag: "Bastidores",
     title: "Entre um post e a aula",
     img: "/images/lanche.jpg",

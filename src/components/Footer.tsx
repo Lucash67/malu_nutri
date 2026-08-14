@@ -2,7 +2,7 @@ import { ContactLink } from "./ContactLink";
 
 export function Footer() {
   return (
-    <footer className="footer">
+    <footer className="footer" data-desk-reveal>
       <div className="wrap">
         <div className="footer__top">
           <div>

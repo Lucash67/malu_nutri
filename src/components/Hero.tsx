@@ -9,7 +9,7 @@ export function Hero() {
   return (
     <section className="hero" id="inicio">
       <div className="wrap hero__stage">
-        <div className="hero__copy">
+        <div className="hero__copy" data-desk-reveal>
           <p className="kicker">Nutrição · 6º semestre</p>
           <h1 className="display">
             <span className="hero__hi">oi, eu sou a</span>
@@ -18,7 +18,7 @@ export function Hero() {
           <p className="hero__pill">pode me chamar de Malu</p>
           <p className="lede">Comida de verdade, faculdade e treino — sem pose de dieta.</p>
         </div>
-        <div className="hero__frames">
+        <div className="hero__frames" data-desk-reveal>
           <div className="hero__stack">
             <figure className="hero__shot hero__shot--main">
               <img
@@ -35,9 +35,9 @@ export function Hero() {
           </div>
         </div>
       </div>
-      <ul className="wrap hero__now" data-reveal>
+      <ul className="wrap hero__now">
         {pulse.map((item) => (
-          <li key={item.k}>
+          <li key={item.k} data-desk-reveal>
             <strong>{item.k}</strong>
             <span>{item.t}</span>
           </li>

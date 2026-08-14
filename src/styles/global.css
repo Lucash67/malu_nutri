@@ -2628,6 +2628,319 @@ section[id] {
   .collab__panel {
     padding: 2rem 2.1rem;
   }
+
+  .kicker,
+  .hero__copy .kicker,
+  .collab__panel .kicker,
+  .partners__head .kicker,
+  .share__head .kicker,
+  .practice__head .kicker,
+  .ground__head .kicker,
+  .identity__intro .kicker {
+    justify-content: center;
+  }
+
+  .hero__copy,
+  .share__head,
+  .practice__head,
+  .partners__head,
+  .ground__head,
+  .identity__intro,
+  .collab__panel,
+  .connect__panel,
+  .footer {
+    text-align: center;
+  }
+
+  .lede,
+  .hero__copy .lede,
+  .identity__intro .lede,
+  .collab__panel .lede,
+  .partners__head .lede,
+  .ground__head .lede,
+  .connect .lede {
+    margin-inline: auto;
+  }
+
+  .hero__stage {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 2.2rem;
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+
+  .hero__copy {
+    padding-bottom: 0;
+  }
+
+  .hero__stack {
+    width: min(100%, 28rem);
+    min-height: 32rem;
+  }
+
+  .hero__actions {
+    justify-content: center;
+  }
+
+  .identity__intro {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    justify-items: center;
+    max-width: 40rem;
+    margin-inline: auto;
+    row-gap: 0.85rem;
+  }
+
+  .identity__intro > .kicker,
+  .identity__intro > h2,
+  .identity__intro > .lede,
+  .identity__intro > .id-card,
+  .identity__traits,
+  .identity__quote {
+    grid-area: auto;
+  }
+
+  .identity__intro > .id-card {
+    margin: 0.4rem 0 0.2rem;
+    justify-self: center;
+  }
+
+  .identity__traits {
+    justify-content: center;
+  }
+
+  .identity__quote {
+    padding-left: 0;
+    border-left: 0;
+    max-width: 28rem;
+  }
+
+  .share__head,
+  .practice__head,
+  .partners__head,
+  .ground__head {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    max-width: 36rem;
+    margin-inline: auto;
+    margin-bottom: 1.8rem;
+  }
+
+  .share__list {
+    justify-content: center;
+  }
+
+  .share-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    max-width: calc(50% - 0.35rem);
+    justify-self: center;
+  }
+
+  .partners__grid {
+    grid-template-columns: repeat(2, minmax(16rem, 22rem));
+    justify-content: center;
+  }
+
+  .practice__mosaic {
+    grid-template-columns: repeat(2, minmax(16rem, 22rem));
+    justify-content: center;
+  }
+
+  .collab__panel {
+    text-align: center;
+  }
+
+  .collab__panel .kicker {
+    justify-content: center;
+  }
+
+  .collab__marks,
+  .collab__panel .hero__actions {
+    justify-content: center;
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .footer__links {
+    justify-content: center;
+  }
+
+  body {
+    overflow-x: clip;
+  }
+
+  [data-reveal],
+  [data-desk-reveal] {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate3d(0, 42px, 0);
+    transition:
+      opacity 0.95s var(--ease),
+      transform 1.05s var(--ease),
+      filter 0.9s var(--ease);
+    transition-delay: calc(var(--reveal-i, 0) * 80ms);
+  }
+
+  [data-reveal].is-in,
+  [data-desk-reveal].is-in {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .share-card[data-reveal]:nth-child(odd),
+  .practice__item[data-reveal]:nth-child(odd),
+  .ground-card[data-reveal]:nth-child(odd),
+  .ticket[data-reveal]:nth-child(odd) {
+    transform: translate3d(-28px, 36px, 0);
+  }
+
+  .share-card[data-reveal]:nth-child(even),
+  .practice__item[data-reveal]:nth-child(even),
+  .ground-card[data-reveal]:nth-child(even),
+  .ticket[data-reveal]:nth-child(even) {
+    transform: translate3d(28px, 36px, 0);
+  }
+
+  .share-card[data-reveal].is-in,
+  .practice__item[data-reveal].is-in,
+  .ground-card[data-reveal].is-in,
+  .ticket[data-reveal].is-in {
+    transform: none;
+  }
+
+  .hero__frames[data-desk-reveal] {
+    transform: translate3d(0, 48px, 0) scale(0.96);
+    transition-delay: 0.14s;
+  }
+
+  .hero__frames[data-desk-reveal].is-in {
+    transform: none;
+  }
+
+  .hero__copy[data-desk-reveal] {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .hero__copy .kicker,
+  .hero__copy h1,
+  .hero__copy .hero__pill,
+  .hero__copy .lede {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translate3d(0, 26px, 0);
+    transition:
+      opacity 0.85s var(--ease),
+      transform 0.95s var(--ease),
+      filter 0.8s var(--ease);
+  }
+
+  .hero__copy.is-in .kicker,
+  .hero__copy.is-in h1,
+  .hero__copy.is-in .hero__pill,
+  .hero__copy.is-in .lede {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .hero__copy.is-in h1 {
+    transition-delay: 0.08s;
+  }
+
+  .hero__copy.is-in .hero__pill {
+    transition-delay: 0.16s;
+  }
+
+  .hero__copy.is-in .lede {
+    transition-delay: 0.24s;
+  }
+
+  .identity__intro[data-reveal] {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .identity__intro .kicker,
+  .identity__intro h2,
+  .identity__intro .lede,
+  .identity__intro .id-card,
+  .identity__intro .trait,
+  .identity__intro .identity__quote {
+    opacity: 0;
+    filter: blur(6px);
+    transform: translate3d(0, 28px, 0);
+    transition:
+      opacity 0.85s var(--ease),
+      transform 0.95s var(--ease),
+      filter 0.8s var(--ease);
+  }
+
+  .identity__intro.is-in .kicker,
+  .identity__intro.is-in h2,
+  .identity__intro.is-in .lede,
+  .identity__intro.is-in .id-card,
+  .identity__intro.is-in .trait,
+  .identity__intro.is-in .identity__quote {
+    opacity: 1;
+    filter: none;
+    transform: none;
+  }
+
+  .identity__intro.is-in h2 {
+    transition-delay: 0.08s;
+  }
+
+  .identity__intro.is-in .lede {
+    transition-delay: 0.14s;
+  }
+
+  .identity__intro.is-in .id-card {
+    transition-delay: 0.2s;
+  }
+
+  .identity__intro.is-in .trait:nth-child(1) {
+    transition-delay: 0.28s;
+  }
+
+  .identity__intro.is-in .trait:nth-child(2) {
+    transition-delay: 0.34s;
+  }
+
+  .identity__intro.is-in .trait:nth-child(3) {
+    transition-delay: 0.4s;
+  }
+
+  .identity__intro.is-in .trait:nth-child(4) {
+    transition-delay: 0.46s;
+  }
+
+  .identity__intro.is-in .trait:nth-child(5) {
+    transition-delay: 0.52s;
+  }
+
+  .identity__intro.is-in .identity__quote {
+    transition-delay: 0.6s;
+  }
+
+  .share-card[data-reveal].is-in:hover,
+  .practice__item[data-reveal].is-in:hover,
+  .ground-card[data-reveal].is-in:hover,
+  .ticket[data-reveal].is-in:hover {
+    transform: translateY(-7px);
+  }
+
+  .id-card {
+    transition: transform 0.7s var(--ease);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -2635,8 +2948,20 @@ section[id] {
     scroll-behavior: auto;
   }
 
-  [data-reveal] {
+  [data-reveal],
+  [data-desk-reveal],
+  .hero__copy .kicker,
+  .hero__copy h1,
+  .hero__copy .hero__pill,
+  .hero__copy .lede,
+  .identity__intro .kicker,
+  .identity__intro h2,
+  .identity__intro .lede,
+  .identity__intro .id-card,
+  .identity__intro .trait,
+  .identity__intro .identity__quote {
     opacity: 1;
+    filter: none;
     transform: none;
     transition: none;
   }

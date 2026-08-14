@@ -12,7 +12,7 @@ const points = [
   {
     tag: "Pela frente",
     title: "Depois do diploma",
-    text: "A profissional que já está nascendo — sem antecipar o que ainda não é.",
+    text: "A profissional que já está nascendo.",
   },
   {
     tag: "A escrever",
